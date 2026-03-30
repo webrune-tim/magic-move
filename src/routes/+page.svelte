@@ -1,20 +1,11 @@
 <script lang="ts">
-	import TempConverter from "./TempConverter.svelte";
-	import PasswordStrenth from "./PasswordStrenth.svelte";
-	import RandomQuote from "./RandomQuote.svelte";
+	import { TempConverter, PasswordStrenth, RandomQuote, BetterEncrypt } from "$lib";
 </script>
 
-<TempConverter />
-
-<br />
-<hr />
-<br />
-
-<PasswordStrenth />
-
-<br />
-<hr />
-<br />
-
-<RandomQuote />
+<div class="space-y-8 mt-6">
+	<TempConverter />
+	<PasswordStrenth />
+	<RandomQuote />
+	<BetterEncrypt />
+</div>
 

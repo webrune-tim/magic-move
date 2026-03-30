@@ -1,1 +1,8 @@
-// place files you want to import through the `$lib` alias in this folder.
+import { Nav } from "./layout";
+
+import { BetterEncrypt } from "./components";
+import { PasswordStrenth } from "./components";
+import { RandomQuote } from "./components";
+import { TempConverter } from "./components";
+
+export { Nav, BetterEncrypt, PasswordStrenth, RandomQuote, TempConverter };

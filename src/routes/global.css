@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --primary: #4338ca;
+  --primary-foreground: #ffffff;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #020617;
+  --surface: #0d111a;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #334155;
+  --primary: #6366f1;
+  --primary-foreground: #f8fafc;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+button,
+input,
+textarea,
+select {
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  background-color: var(--surface);
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+}
+
+.card-header {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-field {
+  margin-bottom: 0.75rem;
+}
+
+.card-label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.card-input,
+.card-textarea,
+.card-select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background-color: var(--bg);
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+}
+
+.card-input:focus,
+.card-textarea:focus,
+.card-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.card-button,
+.card-button-primary {
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-button {
+  color: var(--text);
+  background-color: var(--surface);
+}
+
+.card-button:hover {
+  background-color: var(--bg);
+  color: var(--primary);
+}
+
+.card-button-primary {
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.card-button-primary:hover {
+  opacity: 0.94;
+}
+
+

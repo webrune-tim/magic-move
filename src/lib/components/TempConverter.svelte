@@ -26,20 +26,26 @@
 	}
 </script>
 
-<div>
-	<label for="celsius">Celsius</label>
-	<input
-		id="celsius"
-		type="number"
-		use:temperatureInput={{ value: celsius, onInput: (v) => celsius = v }}
-	/>
-</div>
+<section class="card">
+	<h2 class="card-header">Temperature Converter</h2>
 
-<div>
-	<label for="fahrenheit">Fahrenheit</label>
-	<input
-		id="fahrenheit"
-		type="number"
-		use:temperatureInput={{ value: fahrenheit, onInput: (v) => celsius = (v - 32) * 5/9 }}
-	/>
-</div>
+	<div class="card-field">
+		<label class="card-label" for="celsius">Celsius</label>
+		<input
+			id="celsius"
+			type="number"
+			class="card-input"
+			use:temperatureInput={{ value: celsius, onInput: (v) => celsius = v }}
+		/>
+	</div>
+
+	<div class="card-field">
+		<label class="card-label" for="fahrenheit">Fahrenheit</label>
+		<input
+			id="fahrenheit"
+			type="number"
+			class="card-input"
+			use:temperatureInput={{ value: fahrenheit, onInput: (v) => celsius = (v - 32) * 5/9 }}
+		/>
+	</div>
+</section>
